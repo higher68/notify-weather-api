@@ -15,7 +15,7 @@ documents
 ++component.md
 ++network.md
 +api
-+sequense.md
+++sequense.md
 }
 }
 @endsalt
