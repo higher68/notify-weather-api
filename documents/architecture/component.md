@@ -49,6 +49,8 @@
 
 ### DevOps
 
+- DevOpsの仕組みについて設計する
+
 #### ecs cli
 
 #### CDK
