@@ -3,6 +3,7 @@
 ## 概要
 
 - コンポーネントをまとめる
+- 簡単な構成要素の説明を書く
 - `draw.io`で書く
 
 ## link
@@ -11,48 +12,85 @@
 
 ## 設計
 
-### AWS
+### 機能要件
+
+#### アプリケーション
+
+- アプリケーションの設計
+- TypeScriptで書く
+
+##### 天気取得
+
+- 外部APIからとってくる
+- jsonで取得？
+- レスポンスを加工
+- エラーハンドリング
+
+##### Hueとアプリとの連携
+
+- jsonで送ればいい気がする
+- こちらもエラーハンドリング
+
+###### シーケンス図
+
+##### HueからHueGoへの連携
+
+- なんかよしなにやってくれそうな気がするので、調べるだけ
+
+###### シーケンス図
+
+### 非機能要件
+
+#### AWS
 
 - AWS内部のリソース設計をする
 
-#### ECR
+##### ECR
 
-#### ECS
+- Docker Imageをpush
 
-##### Cluster
+##### ECS
 
-##### Service
+###### Cluster
 
-#### CloudWatchEvent
+- 1つ
 
-### アプリケーション
+###### Service
 
-- アプリケーションの設計をする
+- 1つ
 
-#### 天気取得
+##### CloudWatchEvent
 
-#### Hueとアプリとの連携
+- 1つ
 
-##### シーケンス図
-
-#### HugからHueGoへの連携
-
-##### シーケンス図
-
-### Docker
+#### Docker
 
 - Docker関連の設計をする
 
-#### Dockerfile
+##### Dockerfile
 
-#### docker-compose
+- [TBD]ベースイメージ
+- userハンドリング
+- sshできるようにするか悩む
 
-### DevOps
+##### docker-compose
+
+- v3の記法で書く
+- envファイルは外部に分離
+
+#### DevOps
 
 - DevOpsの仕組みについて設計する
 
-#### ecs cli
 
-#### CDK
+##### ecs cli
 
-#### ECRへのdocker連携
+- ecs cli v2を使ってみる
+
+##### CDK
+
+- これ使って構築してみる
+
+##### ECRへのdocker連携
+
+- なんかdockerコマンド使えばいけるやろ
