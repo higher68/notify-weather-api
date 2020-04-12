@@ -98,6 +98,9 @@
 - 開発手法: アジャイル
 - プログラミング手法: TDD
 - 言語: Typescript
+- フレームワーク: nestjs
+- インフラのフレームワーク: CDK
+- deploy方式: ecs cli v2
 
 ## 参考資料
 
