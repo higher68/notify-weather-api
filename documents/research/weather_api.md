@@ -31,3 +31,7 @@
 - 1日150までできる
 - コードスニペットがある
 - requestできる内容が少ない
+
+## 参考
+
+- [人気の天気APIトップ10](https://blog.api.rakuten.net/top-weather-apis-jp/)
