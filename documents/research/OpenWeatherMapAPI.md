@@ -126,7 +126,7 @@ snipet
 パラメータ一覧
 
 |キー|type|説明|必須|備考|
-|----|----|----|----|----|----|
+|----|----|----|----|----|
 |q|string|場所|o|{city name}, {country code}|
 |lat|numer|緯度|x|使うときはlon必須|
 |lon|number|経度|x||
