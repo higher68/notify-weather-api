@@ -92,16 +92,7 @@ test({"coord":{"lon":-0.13,"lat":51.51},"weather":[{"id":800,"main":"Clear","des
 
 |キー|type|説明|必須|備考|
 |----|----|----|----|----|----|
-|q|string|場所|o|{city name}, {country code}|
-|lat|numer|緯度|x|使うときはlon必須|
-|lon|number|経度|x||
-|callback|string|callback名|x|jsonpを使う際の、callback関数名|
-|id|number|都市のID|x|知りたい土地のID|lon, lat, qとともには使えない|
-|lang|string|requestの文字型|x|日本語もありそう|
-|units|string|距離に使う単位|x|metric(メートル),imperial(ポンド)|
-|mode|string|outputの形式|x|jsonがデフォルト。xml, htmlなども選べる|
-|cnt|string|返ってくる市の数|x||
-|zip|string|郵便番号|x||
+|q|string|場所|o|{city name},{country code}|
 
 レスポンスについて
 
