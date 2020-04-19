@@ -45,7 +45,7 @@
 |q|string|場所|o|公式サイトで調べたら出るからそれ使う|
 |lat|numer|緯度|x|使うときはlon必須|
 |lon|number|経度|x||
-|callback|string|callback名|x||jsonpを使う際の、callback関数名|
+|callback|string|callback名|x|jsonpを使う際の、callback関数名|
 |id|number|都市のID|x|知りたい土地のID|lon, lat, qとともには使えない|
 |lang|string|requestの文字型|x|日本語もありそう|
 |units|string|距離に使う単位|x|metric(メートル),imperial(ポンド)|
@@ -95,7 +95,6 @@ test({"coord":{"lon":-0.13,"lat":51.51},"weather":[{"id":800,"main":"Clear","des
 |q|string|場所|o|{city name}, {country code}|
 |lat|numer|緯度|x|使うときはlon必須|
 |lon|number|経度|x||
-|callback|string|callback名|x|jsonpを使う際の、callback関数名|
 |id|number|都市のID|x|知りたい土地のID|lon, lat, qとともには使えない|
 |lang|string|requestの文字型|x|日本語もありそう|
 |units|string|距離に使う単位|x|metric(メートル),imperial(ポンド)|
