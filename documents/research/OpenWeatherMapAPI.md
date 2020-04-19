@@ -45,7 +45,7 @@
 |q|string|場所|o|公式サイトで調べたら出るからそれ使う|
 |lat|numer|緯度|x|使うときはlon必須|
 |lon|number|経度|x||
-|callback|string|callback名||x|jsonpを使う際の、callback関数名|
+|callback|string|callback名|x||jsonpを使う際の、callback関数名|
 |id|number|都市のID|x|知りたい土地のID|lon, lat, qとともには使えない|
 |lang|string|requestの文字型|x|日本語もありそう|
 |units|string|距離に使う単位|x|metric(メートル),imperial(ポンド)|
@@ -73,6 +73,8 @@
 |main(temp_max)|最高気温||
 |clouds(all)|雲量||
 |visibility|視程||
+
+snipet
 
 ```zsh
 ➜ ~ curl --request GET \
@@ -106,6 +108,8 @@ test({"coord":{"lon":-0.13,"lat":51.51},"weather":[{"id":800,"main":"Clear","des
 - 特に特徴的なものはなし
 - たくさんリスト形式で返ってくる
 
+snipet
+
 ```zsh
 ➜ ~ curl --request GET \
         --url 'https://community-open-weather-map.p.rapidapi.com/forecast?id=2172797&units=%2522metric%2522%20or%20%2522imperial%2522&mode=xml%252C%20html&q=London' \
@@ -135,6 +139,8 @@ test({"coord":{"lon":-0.13,"lat":51.51},"weather":[{"id":800,"main":"Clear","des
 
 特に特徴的なものはなし
 リストで返ってくることくらいか
+
+snipet
 
 ```zsh
 ➜ ~ curl --request GET \
