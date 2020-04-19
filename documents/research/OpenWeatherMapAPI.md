@@ -92,7 +92,6 @@ test({"coord":{"lon":-0.13,"lat":51.51},"weather":[{"id":800,"main":"Clear","des
 
 |キー|type|説明|必須|備考|
 |----|----|----|----|----|----|
-|q|string|場所|o|{city name},{country code}|
 
 レスポンスについて
 
