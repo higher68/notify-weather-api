@@ -30,7 +30,7 @@
 ## 共通仕様
 
 |ヘッダキー|type|説明|必須|備考|
-|--|--|--|--|--|--|
+|----|----|----|----|----|
 |X-RapidAPI-Host|string|ホスト？|o||
 |X-RapidAPI-Key|string|APIキー|o||
 
@@ -41,7 +41,7 @@
 パラメータ一覧
 
 |キー|type|説明|必須|備考|
-|--|--|--|--|--|--|
+|----|----|----|----|----|
 |q|string|場所|o|公式サイトで調べたら出るからそれ使う|
 |lat|numer|緯度|x|使うときはlon必須|
 |lon|number|経度|x||
@@ -54,7 +54,7 @@
 レスポンスの内容
 
 |キー|説明|備考|
-|--|--|--|
+|----|----|----|
 |coord|coordinate(緯度経度座標)||
 |dt|UNIX時間||
 |sys(sunset)|日の入の時間||
@@ -78,7 +78,7 @@
 ➜ ~ curl --request GET \
         --url 'https://community-open-weather-map.p.rapidapi.com/weather?callback=test&id=2172797&units=%2522metric%2522%20or%20%2522imperial%2522&mode=xml%252C%20html&q=London' \
         --header "x-rapidapi-host: $X_RAPID_HOST" \
-        --header "x-rapidapi-key: $X_RAPIDAPI_KEY"                                   
+        --header "x-rapidapi-key: $X_RAPIDAPI_KEY"
 test({"coord":{"lon":-0.13,"lat":51.51},"weather":[{"id":800,"main":"Clear","description":"clear sky","icon":"01d"}],"base":"stations","main":{"temp":290.18,"feels_like":284.72,"temp_min":288.15,"temp_max":291.48,"pressure":1019,"humidity":33},"visibility":10000,"wind":{"speed":5.1,"deg":50},"clouds":{"all":1},"dt":1587302166,"sys":{"type":1,"id":1414,"country":"GB","sunrise":1587272119,"sunset":1587323004},"timezone":3600,"id":2643743,"name":"London","cod":200})%
 ```
 
@@ -89,7 +89,7 @@ test({"coord":{"lon":-0.13,"lat":51.51},"weather":[{"id":800,"main":"Clear","des
 パラメータ一覧
 
 |キー|type|説明|必須|備考|
-|--|--|--|--|--|--|
+|----|----|----|----|----|----|
 |q|string|場所|o|{city name}, {country code}|
 |lat|numer|緯度|x|使うときはlon必須|
 |lon|number|経度|x||
@@ -107,10 +107,10 @@ test({"coord":{"lon":-0.13,"lat":51.51},"weather":[{"id":800,"main":"Clear","des
 - たくさんリスト形式で返ってくる
 
 ```zsh
-curl --request GET \
+➜ ~ curl --request GET \
         --url 'https://community-open-weather-map.p.rapidapi.com/forecast?id=2172797&units=%2522metric%2522%20or%20%2522imperial%2522&mode=xml%252C%20html&q=London' \
         --header "x-rapidapi-host: $X_RAPID_HOST" \
-        --header "x-rapidapi-key: $X_RAPIDAPI_KEY"                                   
+        --header "x-rapidapi-key: $X_RAPIDAPI_KEY"
 {"cod":"200","message":0,"cnt":40,"list":[{"dt":1587308400,"main":{"temp":289.9,"feels_like":284.35,"temp_min":288.74,"temp_max":289.9,"pressure":1019,"sea_level":1019,"grnd_
 --------skipping--------
 ```
@@ -122,7 +122,7 @@ curl --request GET \
 パラメータ一覧
 
 |キー|type|説明|必須|備考|
-|--|--|--|--|--|--|
+|----|----|----|----|----|----|
 |q|string|場所|o|{city name}, {country code}|
 |lat|numer|緯度|x|使うときはlon必須|
 |lon|number|経度|x||
@@ -137,7 +137,7 @@ curl --request GET \
 リストで返ってくることくらいか
 
 ```zsh
-➜  notify-weather-api git:(feature/65) ✗ curl --request GET \
+➜ ~ curl --request GET \
         --url 'https://community-open-weather-map.p.rapidapi.com/find?q=London' \
         --header "x-rapidapi-host: $X_RAPID_HOST" \
         --header "x-rapidapi-key: $X_RAPIDAPI_KEY"
