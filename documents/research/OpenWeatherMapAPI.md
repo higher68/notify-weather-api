@@ -51,6 +51,29 @@
 |units|string|距離に使う単位|x|metric(メートル),imperial(ポンド)|
 |mode|string|outputの形式|x|jsonがデフォルト。xml, htmlなども選べる|
 
+レスポンスの内容
+
+|キー|説明|備考|
+|--|--|--|
+|coord|coordinate(緯度経度座標)||
+|dt|UNIX時間||
+|sys(sunset)|日の入の時間||
+|sys(sunrise)|日の出の時間||
+|timezone|タイムゾーン。何秒ずれてるか||
+|Name|都市名||
+|cod|レスポンスのステータスコード|
+|id|都市のID||
+|wind(speed)|風速||
+|base|内部パラメータらしいけどなにそれ|stationsとか入ってるけどわからん|
+|weather(main)|天気||
+|main(temp)|気温(K?)||
+|main(pressure)|気圧(P)||
+|main(humidity)|湿度||
+|main(temp_min)|最低気温||
+|main(temp_max)|最高気温||
+|clouds(all)|雲量||
+|visibility|視程||
+
 ## 5 days/3 hour forecast API
 
 - 3hour内の気候を5日間でGET
@@ -70,6 +93,11 @@
 |cnt|string|返ってくる市の数|x||
 |zip|string|郵便番号|x||
 
+レスポンスについて
+
+- 特に特徴的なものはなし
+- たくさんリスト形式で返ってくる
+
 ## Search Weather API
 
 - ざっくりした名前から気候をgetできる
@@ -85,3 +113,8 @@
 |mode|string|outputの形式|x|jsonがデフォルト。xml, htmlなども選べる|
 |cnt|string|返ってくる市の数|x||
 |type|string|都市名の検索の仕方|x|like:部分一致, accurate:完全一致|
+
+レスポンスの内容
+
+特に特徴的なものはなし
+リストで返ってくることくらいか
