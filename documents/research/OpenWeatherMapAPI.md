@@ -74,6 +74,14 @@
 |clouds(all)|雲量||
 |visibility|視程||
 
+```zsh
+➜ ~ curl --request GET \
+        --url 'https://community-open-weather-map.p.rapidapi.com/weather?callback=test&id=2172797&units=%2522metric%2522%20or%20%2522imperial%2522&mode=xml%252C%20html&q=London' \
+        --header "x-rapidapi-host: $X_RAPID_HOST" \
+        --header "x-rapidapi-key: $X_RAPIDAPI_KEY"                                   
+test({"coord":{"lon":-0.13,"lat":51.51},"weather":[{"id":800,"main":"Clear","description":"clear sky","icon":"01d"}],"base":"stations","main":{"temp":290.18,"feels_like":284.72,"temp_min":288.15,"temp_max":291.48,"pressure":1019,"humidity":33},"visibility":10000,"wind":{"speed":5.1,"deg":50},"clouds":{"all":1},"dt":1587302166,"sys":{"type":1,"id":1414,"country":"GB","sunrise":1587272119,"sunset":1587323004},"timezone":3600,"id":2643743,"name":"London","cod":200})%
+```
+
 ## 5 days/3 hour forecast API
 
 - 3hour内の気候を5日間でGET
@@ -98,6 +106,15 @@
 - 特に特徴的なものはなし
 - たくさんリスト形式で返ってくる
 
+```zsh
+curl --request GET \
+        --url 'https://community-open-weather-map.p.rapidapi.com/forecast?id=2172797&units=%2522metric%2522%20or%20%2522imperial%2522&mode=xml%252C%20html&q=London' \
+        --header "x-rapidapi-host: $X_RAPID_HOST" \
+        --header "x-rapidapi-key: $X_RAPIDAPI_KEY"                                   
+{"cod":"200","message":0,"cnt":40,"list":[{"dt":1587308400,"main":{"temp":289.9,"feels_like":284.35,"temp_min":288.74,"temp_max":289.9,"pressure":1019,"sea_level":1019,"grnd_
+--------skipping--------
+```
+
 ## Search Weather API
 
 - ざっくりした名前から気候をgetできる
@@ -118,3 +135,12 @@
 
 特に特徴的なものはなし
 リストで返ってくることくらいか
+
+```zsh
+➜  notify-weather-api git:(feature/65) ✗ curl --request GET \
+        --url 'https://community-open-weather-map.p.rapidapi.com/find?q=London' \
+        --header "x-rapidapi-host: $X_RAPID_HOST" \
+        --header "x-rapidapi-key: $X_RAPIDAPI_KEY"
+{"message":"accurate","cod":"200","count":5,"list":[{"id":2643743,"name":"London","coord":{"lat":51.5085,"lon":-0.1257},"main":{"temp":290.08,"feels_like":284.5,"temp_min":288.15,"temp_max":291.48,"pressure":1020,"humidity":38},"dt":1587301759,"wind":{"speed":5.7,"deg":60},"sys":{"country":"GB"},"rain":null,"snow":null,"clouds":{"all":1},
+------------skipping------------
+```
