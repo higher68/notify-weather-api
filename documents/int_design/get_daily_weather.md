@@ -13,5 +13,7 @@ participant OpenWeatherMap as owm
 app -> owm: GET\njson
 activate owm
 owm -> app: response\njson
+deactivate owm
+
 @enduml
 ```
