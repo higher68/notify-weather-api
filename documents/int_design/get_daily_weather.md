@@ -17,3 +17,25 @@ deactivate owm
 
 @enduml
 ```
+
+## request
+
+## エンドポイント
+
+- `5 days/3 hour forecast API`
+
+### ヘッダ
+
+|ヘッダキー|type|説明|必須|備考|
+|----|----|----|----|----|
+|X-RapidAPI-Host|string|ホスト|o||
+|X-RapidAPI-Key|string|APIキー|o||
+
+### 使うパラメータ
+
+|キー|type|Value|備考|
+|----|----|----|----|----|
+|q|string|Hiroo,JP/Kawasaki,JP||2つの場所を取得する|
+|units|string|metric||
+|mode|string|json||
+|cnt|string|5||
