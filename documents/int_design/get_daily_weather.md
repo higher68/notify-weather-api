@@ -34,8 +34,8 @@ deactivate owm
 ### 使うパラメータ
 
 |キー|type|Value|備考|
-|----|----|----|----|----|
-|q|string|Hiroo,JP/Kawasaki,JP||2つの場所を取得する|
+|----|----|----|----|
+|q|string|Hiroo,JP/Kawasaki,JP|2つの場所を取得する|
 |units|string|metric||
 |mode|string|json||
 |cnt|string|5||
