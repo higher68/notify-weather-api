@@ -1,0 +1,31 @@
+{
+    "name": "notify-weather-api",
+    "version": "1.0.0",
+    "description": "## 概要",
+    "main": "index.js",
+    "scripts": {
+        "test": "jest",
+        "lint": "tslint -p tsconfig.json -c tslint.json"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/higher68/notify-weather-api.git"
+    },
+    "author": "j-haya",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/higher68/notify-weather-api/issues"
+    },
+    "homepage": "https://github.com/higher68/notify-weather-api#readme",
+    "dependencies": {
+        "@types/jest": "^25.2.1",
+        "@types/node": "^13.13.4",
+        "axios": "^0.19.2",
+        "jest": "^25.5.4",
+        "process": "^0.11.10",
+        "ts-jest": "^25.4.0",
+        "ts-node": "^8.9.1",
+        "tslint": "^6.1.2",
+        "typescript": "^3.8.3"
+    }
+}
