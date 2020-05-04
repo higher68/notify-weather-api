@@ -1,7 +1,7 @@
 {
     "name": "notify-weather-api",
     "version": "1.0.0",
-    "description": "## 概要",
+    "description": "天気取得連携",
     "main": "index.js",
     "scripts": {
         "test": "jest",
