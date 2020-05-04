@@ -11,6 +11,7 @@ export class Config {
 
     public static getInstance() {
         if (this.config == null) {
+            console.log('[DEBUG] new Config()');
             this.config = new Config();
         }
         return this.config;
