@@ -108,3 +108,9 @@ dist
 
 # node-version
 .node-version
+
+# js
+.js
+
+# IntelliJ
+.idea
